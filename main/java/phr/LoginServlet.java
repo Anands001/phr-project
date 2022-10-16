@@ -11,19 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
  
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String name=request.getParameter("username");
+		String uname=request.getParameter("username");
 		String password=request.getParameter("password");
-		
+		System.out.println(uname+" "+password);
 		LoginDao ld=new LoginDao();
 		try {
-			if(ld.log(name, password)) {
-				PrintWriter out=response.getWriter();
-				out.println("success");
+			if(ld.log(uname, password)) {
+				response.sendRedirect("index.jsp");	
 			}
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

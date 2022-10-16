@@ -46,18 +46,22 @@
                   
                   </p>
                 </div>
-                <form action="#" method="post">
+                <form action="create" method="post">
                   <div class="form-group">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" id="username" />
+                    <input type="text" class="form-control" id="username" name="username" />
                   </div>
                   <div class="form-group">
                     <label for="mail">Email</label>
-                    <input type="email" class="form-control" id="Email" />
+                    <input type="email" class="form-control" id="Email" name="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="fullname" />
                   </div>
                   
                   <div class="form-group">
-                   <select  class="custom-select" style="background-color:#EDF2F5; border:none; color:#B3B3B3; font-size:12px; decoration:none; padding:0px;" name="secqns" >
+                   <select  class="custom-select" style="background-color:#EDF2F5; border:none; color:#B3B3B3; font-size:12px; decoration:none; padding:0px;" name="secqns">
 					  <option selected style="text-align:left;">Security question</option>
 					  <option value="what is your favourite subject?">what is your favourite subject?</option>
 					  <option value="What high school did you attend?">What high school did you attend?</option>
@@ -66,7 +70,7 @@
                   </div>
                   <div class="form-group">
                     <label for="seqans">Security Answer</label>
-                    <input type="text" class="form-control" id="secans" />
+                    <input type="text" class="form-control" id="secans" name="secans" />
                   </div>
                   <div class="form-group">
                     <label for="newpassword">New Password</label>
@@ -74,7 +78,7 @@
                   </div>
                   <div class="form-group mb-4">
                     <label for="conpassword">Confirm Password</label>
-                    <input type="password" class="form-control" id="conpassword" />
+                    <input type="password" class="form-control" id="conpassword" name="password"/>
                   </div>
 
                   <div class="d-flex mb-5 align-items-center">

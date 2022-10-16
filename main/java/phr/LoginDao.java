@@ -15,7 +15,7 @@ public class LoginDao {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con=DriverManager.getConnection(url,uname,pass);
 		
-		String query="select * from user where username=? and password=?";
+		String query="select * from user where Username=? and password=?";
 		
 		PreparedStatement pt=con.prepareStatement(query);
 		pt.setString(1, username);
