@@ -24,7 +24,7 @@ public class create extends HttpServlet {
 		String name=request.getParameter("fullname");
 		String email=request.getParameter("email");
 		String secqns=request.getParameter("secqns");
-		String secans=request.getParameter("answer");
+		String secans=request.getParameter("secans");
 		
 		insertdb s=new insertdb();
 		HttpSession session=request.getSession();

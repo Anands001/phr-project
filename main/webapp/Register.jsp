@@ -25,6 +25,10 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Register</title>
+    
+        <script src="js/jquery-3.3.1.min.js"></script>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
   </head>
   <body>
     <div class="content">
@@ -73,13 +77,17 @@
                     <input type="text" class="form-control" id="secans" name="secans" />
                   </div>
                   <div class="form-group">
-                    <label for="newpassword">New Password</label>
-                    <input type="password" class="form-control" id="newpassword" />
+                    <label for="newpassword">Password</label>
+                    <input type="password" class="form-control" id="pass1" />
                   </div>
                   <div class="form-group mb-4">
-                    <label for="conpassword">Confirm Password</label>
-                    <input type="password" class="form-control" id="conpassword" name="password"/>
+                    <label for="conpassword">Confirm Password    </label>
+                    <input type="password" class="form-control" id="pass2" name="password"/>
+                            
+                    <p id="ps"></p>
                   </div>
+                  
+                  
 
                   <div class="d-flex mb-5 align-items-center">
                     <label class="control control--checkbox mb-0"
@@ -120,9 +128,10 @@
         </div>
       </div>
     </div>
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
