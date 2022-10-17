@@ -37,6 +37,9 @@
     	a == b ? document.getElementById("i1").setAttribute("class", "fa-solid fa-circle-check") : document.getElementById("i1").setAttribute("class", "fa-solid fa-xmark")
     	}
     </script>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   </head>
   <body>
     <div class="content">
@@ -88,11 +91,11 @@
                     <label for="newpassword">Password</label>
                     <input type="password" class="form-control" id="pass1" />
                   </div>
-                  <div class="form-group mb-4">
-                    <label for="conpassword">Confirm Password</label>
-                    <input onkeyup="cfun()" type="password" class="form-control" id="pass2" name="password"/><span style="margin-left:270px;"><i id="i1" style="font-size:20px;" class=""></i></span>
-                            
-                  <!--  <p id="ps"></p>-->
+                  <div class="form-group">
+
+                    <label for="conpassword">Confirm Password    </label>
+                    <input type="password" class="form-control" id="pass2" onkeyup="cfun()" name="password"/><span style="margin-left:270px;"><i id="i1" style="font-size:20px;" class=""></i></span>
+                   
                   </div>
                   
                   
@@ -136,7 +139,6 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>

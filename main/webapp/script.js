@@ -6,7 +6,8 @@
     
     
     function checkPassword () {
-        result.innerText = pass1.value == pass2.value ? '<i class="fa-solid fa-circle-check" style="font-size:20px;color:#6C63FF;"></i>' : 'Password does not match';
+        result.innerText = pass1.value == pass2.value ?
+        '' : 'Password does not match';
     }
     
     pass1.addEventListener('keyup', () => {
@@ -14,3 +15,4 @@
     })
     
     pass2.addEventListener('keyup', checkPassword);
+    
