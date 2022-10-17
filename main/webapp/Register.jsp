@@ -28,7 +28,15 @@
     
         <script src="js/jquery-3.3.1.min.js"></script>
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <script>
+    function cfun(){
+    	
+    	var a = document.getElementById("pass1").value;
+    	var b = document.getElementById("pass2").value;
+    	
+    	a == b ? document.getElementById("i1").setAttribute("class", "fa-solid fa-circle-check") : document.getElementById("i1").setAttribute("class", "fa-solid fa-xmark")
+    	}
+    </script>
   </head>
   <body>
     <div class="content">
@@ -81,10 +89,10 @@
                     <input type="password" class="form-control" id="pass1" />
                   </div>
                   <div class="form-group mb-4">
-                    <label for="conpassword">Confirm Password    </label>
-                    <input type="password" class="form-control" id="pass2" name="password"/>
+                    <label for="conpassword">Confirm Password</label>
+                    <input onkeyup="cfun()" type="password" class="form-control" id="pass2" name="password"/><span style="margin-left:270px;"><i id="i1" style="font-size:20px;" class=""></i></span>
                             
-                    <p id="ps"></p>
+                  <!--  <p id="ps"></p>-->
                   </div>
                   
                   
