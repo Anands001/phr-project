@@ -19,4 +19,13 @@
   <servlet-name>reg1</servlet-name>
   <url-pattern>/create</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>bp</servlet-name>
+  <servlet-class>phr.BpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>bp</servlet-name>
+  <url-pattern>/BpServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

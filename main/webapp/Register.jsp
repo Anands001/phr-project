@@ -129,7 +129,7 @@
                       <span class="icon-twitter mr-3"></span>
                     </a>
                     <a href="#" class="google">
-                      <span class="icon-google mr-3"></span>
+                      <span class="icon-google mr-3"></span>s
                     </a>
                   </div>-->
                 </form>

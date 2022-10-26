@@ -38,7 +38,7 @@ public class create extends HttpServlet {
 			}
 			else {
 				session.setAttribute("imsg", "false");
-				response.sendRedirect("signup.jsp");
+				response.sendRedirect("Register.jsp");
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

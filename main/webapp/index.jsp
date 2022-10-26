@@ -24,31 +24,8 @@
 
 <body>
 
-  <header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div id="logo">
-        <h1><a href="index.html"><span>e</span>Health</a></h1>
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about-us">About</a></li>
-          <li><a class="nav-link scrollto" href="Login.jsp">Login</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 2</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-
-    </div>
-  </header>
+ 
+  <%@include file="Navbar.jsp" %>
 
   <section id="hero">
     <div class="hero-container" data-aos="fade-in">
@@ -85,9 +62,9 @@
             <div class="feature-block">
 
               <img src="assets/img/svg/cloud.svg" alt="img">
-              <h4>introducing whatsapp</h4>
+              <h4>Medical Records</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
+              <a href="Records.jsp">read more</a>
 
             </div>
           </div>
@@ -96,9 +73,9 @@
             <div class="feature-block">
 
               <img src="assets/img/svg/planet.svg" alt="img">
-              <h4>user friendly interface</h4>
+              <h4>Doctors</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
+              <a href="doctors.jsp">read more</a>
 
             </div>
           </div>
@@ -107,7 +84,7 @@
             <div class="feature-block">
 
               <img src="assets/img/svg/asteroid.svg" alt="img">
-              <h4>build the app everyone love</h4>
+              <h4>Appointments</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
               <a href="#">read more</a>
 
@@ -119,7 +96,7 @@
 
     </section><!-- End Get Started Section -->
 
-    <!-- ======= About Us Section ======= -->
+    <!-- ======= About Us Section ======= 
     <section id="about-us" class="about-us padd-section">
       <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
@@ -149,7 +126,7 @@
       </div>
     </section><!-- End About Us Section -->
 
-    <!-- ======= Contact Section ======= -->
+    <!-- ======= Contact Section ======= 
     <section id="contact" class="padd-section">
 
       <div class="container" data-aos="fade-up">
