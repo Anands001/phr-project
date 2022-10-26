@@ -17,9 +17,21 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
+<%@page import="phr.* "  %>
+<%@page import="entity.* "  %>
+<%@page import="java.util.* "  %>
 <%@include file="Navbar.jsp" %>
 <section id="get-started" class="padd-section text-center">
+<%
+	if(session.getAttribute("username")==null){
+		response.sendRedirect("Login.jsp");
+	}
 
+	AppointDao ad=new AppointDao();
+	ArrayList<appointentity> l=ad.appoints((String)session.getAttribute("username"));
+
+	
+%>
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center">
 
@@ -30,57 +42,27 @@
       </div>
 
       <div class="container">
+      <% for(appointentity a:l){ %>
         <div class="row">
 
-          <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="100">
-            <div class="feature-block">
+          
 
-              <img src="images/Bpicon.jpg" alt="img" style="object-fit:contain;">
-              <h4>JOHN</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="bp1.jsp">read more</a>
-
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="200">
             <div class="feature-block">
 
               <img src="assets/img/svg/cloud.svg" alt="img">
-              <h4>Add Record</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="addrecord.jsp">read more</a>
+              <h4><%= a.getDoctorname() %></h4>
+              <p>Specialist:<%= a.getSpecialist() %></p>
+              <p>Appointment Date:<%= a.getAptdate() %></p>
+              <p>Appointment Time:<%= a.getApttime() %></p>
+              <a href="Cancelappoint?docname=<%= a.getDoctorname()%>">Cancel Appointment</a>
 
             </div>
           </div>
 
-          
-          
-         
-            
-          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="feature-block">
-
-              <img src="assets/img/svg/cloud.svg" alt="img">
-              <h4>Medical Insurance</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
-
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="feature-block">
-
-              <img src="assets/img/svg/planet.svg" alt="img">
-              <h4>Lab Results</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
-
-            </div>
-          </div>
 
         </div>
+        <% } %>
       </div>
 
     </section>

@@ -18,6 +18,9 @@
 </head>
 <body>
 <%@include file="Navbar.jsp" %>
+<% if(session.getAttribute("username")==null){
+	response.sendRedirect("Login.jsp");
+} %>
 <section id="get-started" class="padd-section text-center">
 
       <div class="container" data-aos="fade-up">
@@ -38,7 +41,7 @@
               <img src="images/Bpicon.jpg" alt="img" style="object-fit:contain;">
               <h4>Blood Pressure</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="bp1.jsp">read more</a>
+              <a href="bp1.jsp">ADD</a>
 
             </div>
           </div>
@@ -49,7 +52,7 @@
               <img src="assets/img/svg/cloud.svg" alt="img">
               <h4>Add Record</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="addrecord.jsp">read more</a>
+              <a href="addrecord.jsp">ADD</a>
 
             </div>
           </div>
@@ -60,7 +63,7 @@
               <img src="assets/img/svg/planet.svg" alt="img">
               <h4>Weight</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="weight.jsp">read more</a>
+              <a href="weight.jsp">ADD</a>
 
             </div>
           </div>
@@ -71,7 +74,7 @@
               <img src="assets/img/svg/cloud.svg" alt="img">
               <h4>Height</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
+              <a href="Height.jsp">ADD</a>
 
             </div>
           </div>
@@ -82,7 +85,7 @@
               <img src="assets/img/svg/cloud.svg" alt="img">
               <h4>Medical Insurance</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
+              <a href="medicalinsur.jsp">ADD</a>
 
             </div>
           </div>
@@ -93,7 +96,7 @@
               <img src="assets/img/svg/planet.svg" alt="img">
               <h4>Lab Results</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
+              <a href="labresult.jsp">Add</a>
 
             </div>
           </div>

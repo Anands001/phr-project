@@ -9,18 +9,26 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class logout
+ * Servlet implementation class Cancelappoint
  */
-@WebServlet("/logout")
-public class logout extends HttpServlet {
+@WebServlet("/doccancelappoint")
+public class doccancelappoint extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-  
+   
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession();
-		session.removeAttribute("username");
-		session.removeAttribute("docname");
-		response.sendRedirect("Login.jsp");
+		
+		String username=request.getParameter("username");
+		String doctorname=request.getParameter("docname");
+		
+		AppointDao ad=new AppointDao();
+		try {
+			ad.cancel(username, doctorname);
+			response.sendRedirect("Doctorlog.jsp");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -18,6 +18,13 @@ public class LoginServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String uname=request.getParameter("username");
 		String password=request.getParameter("password");
+		
+		if((uname.equals("hanna")&&password.equals("1234"))||(uname.equals("amelia")&&password.equals("1234"))||(uname.equals("tomholland")&&password.equals("1234"))||(uname.equals("john")&&password.equals("1234"))) {
+			HttpSession session=request.getSession();
+			session.setAttribute("docname", uname);
+			response.sendRedirect("Doctorlog.jsp");
+		}
+		
 		System.out.println(uname+" "+password);
 		LoginDao ld=new LoginDao();
 		HttpSession session=request.getSession();

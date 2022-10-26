@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Doctors</title>
+<title>Appointments</title>
 <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -17,74 +17,48 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
+<%@page import="phr.* "  %>
+<%@page import="entity.* "  %>
+<%@page import="java.util.* "  %>
 <%@include file="Navbar.jsp" %>
-<% if(session.getAttribute("username")==null){
-	response.sendRedirect("Login.jsp");
-} %>
 <section id="get-started" class="padd-section text-center">
+<%
+	AppointDao ad=new AppointDao();
+	ArrayList<appointentity> l=ad.docappoint((String)session.getAttribute("docname"));
 
+%>
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center">
 
-          <h2>Choose any doctor</h2>
+          <h2>Your Appointments</h2>
           <p class="separator">eHealth offers a wide range of personal tools and services to users, from healthcare information organizations and disease management outlets to personal reminders to refill prescriptions, attend medical appointments and more.</p>
 
         </div>
       </div>
 
       <div class="container">
+      <% for(appointentity a:l){ %>
         <div class="row">
 
-          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="feature-block">
+          
 
-              <img src="images/Bpicon.jpg" alt="img" style="object-fit:contain;">
-              <h4>JOHN</h4>
-              
-              <p>Specialist: Cardiologist,Anesthesiologists</p>
-              <a href="doctoshedserv?docname=john">Shedule Appointment</a>
-
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-md-6 col-lg-12" data-aos="zoom-in" data-aos-delay="200">
             <div class="feature-block">
 
               <img src="assets/img/svg/cloud.svg" alt="img">
-              <h4>HANNA</h4>
-              <p>Specialist: Dermatologists</p>
-              <a href="doctoshedserv?docname=Hanna">Shedule Appointment</a>
+              <h4>Patient Name: <%= a.getFullname() %></h4>
+              <p>Contact: <%= a.getMobilenum() %></p>
+              <p>Email: <%= a.getEmail() %></p>
+              <p>Appointment Date: <%= a.getAptdate() %></p>
+              <p>Appointment Time: <%= a.getApttime() %></p>
+              <a href="doccancelappoint?docname=<%= a.getDoctorname()%>&username=<%= a.getUsername() %>">Cancel Appointment</a>
 
             </div>
           </div>
 
-          
-          
-         
-            
-          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="feature-block">
-
-              <img src="assets/img/svg/cloud.svg" alt="img">
-              <h4>AMELIA</h4>
-              <p>Specialist:Ophthalmologists.</p>
-              <a href="doctoshedserv?docname=Amelia">Shedule Appointment</a>
-
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="feature-block">
-
-              <img src="assets/img/svg/planet.svg" alt="img">
-              <h4>TOM HOLLAND</h4>
-              <p>Specialist:Anesthesiology.</p>
-              <a href="doctoshedserv?docname=Tom holland">Shedule Appointment</a>
-
-            </div>
-          </div>
 
         </div>
+        <% } %>
       </div>
 
     </section>

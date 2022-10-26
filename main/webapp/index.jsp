@@ -33,11 +33,11 @@
       <h2>Join now to lead a Healthy Lifestyle!</h2>
       <img src="assets/img/hero-img.png" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
       <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
-      <div class="btns">
+      <!--  <div class="btns">
         <a href="#"><i class="fa fa-apple fa-3x"></i>App Store</a>
         <a href="#"><i class="fa fa-play fa-3x"></i>Google Play</a>
         <a href="#"><i class="fa fa-windows fa-3x"></i>Windows</a>
-      </div>
+      </div>-->
     </div>
   </section>
 
@@ -64,7 +64,7 @@
               <img src="assets/img/svg/cloud.svg" alt="img">
               <h4>Medical Records</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="Records.jsp">read more</a>
+              <a href="Records.jsp">View</a>
 
             </div>
           </div>
@@ -75,7 +75,7 @@
               <img src="assets/img/svg/planet.svg" alt="img">
               <h4>Doctors</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="doctors.jsp">read more</a>
+              <a href="doctors.jsp">View</a>
 
             </div>
           </div>
@@ -86,7 +86,7 @@
               <img src="assets/img/svg/asteroid.svg" alt="img">
               <h4>Appointments</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-              <a href="#">read more</a>
+              <a href="Appointserv">View</a>
 
             </div>
           </div>
