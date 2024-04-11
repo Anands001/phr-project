@@ -69,18 +69,18 @@ This project is a Personal Health Record (PHR) management system developed using
 ### Home Page
 ![image](https://github.com/Anands001/phr-project/assets/110816114/494cbbab-b466-4a74-9882-08e640544209).
 ![image](https://github.com/Anands001/phr-project/assets/110816114/e6e9b809-df9f-4c83-b34c-ff194c9ad73b)
--- The user can view stored records and available doctors for appointment and sheduled appointments
+- The user can view stored records and available doctors for appointment and sheduled appointments
 
 ### Personal Health Records
 ![image](https://github.com/Anands001/phr-project/assets/110816114/6bc4e327-8f6b-4919-a8d4-4d030966be86)
 ![image](https://github.com/Anands001/phr-project/assets/110816114/ba0e51f1-f6a8-466b-adb7-6437185f52ad)
 ![image](https://github.com/Anands001/phr-project/assets/110816114/ac454077-083c-4cdb-ba21-5b0925a2dac4)
--- The user can add, edit and view their medical records
+- The user can add, edit and view their medical records
 
 ### Doctors
 ![image](https://github.com/Anands001/phr-project/assets/110816114/a9bc7bb5-45b6-4653-bd1e-706cb7fcff86)
 ![image](https://github.com/Anands001/phr-project/assets/110816114/8eaf9523-0bf3-4d49-aa03-ad93a5de9bfb)
--- The user can View and book Appointments
+- The user can View and book Appointments
 
 ## License
 
